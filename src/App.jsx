@@ -4,14 +4,13 @@ import { Header } from './components/Header/Header'
 import { Sidebar } from './components/Sidebar/Sidebar';
 import { Home } from './pages/Home/Home'
 import AboutUs from './pages/AboutUs/AboutUs'
+import { Anime } from "./pages/Anime/Anime";
 
 
 function App() {
 
-  // const Home = () => <h2>Home Page</h2>;
-  const Anime = () => <h2>Anime Page</h2>;
+
   const Manga = () => <h2>Manga Page</h2>;
-  const About = () => <h2>About Us</h2>;
   const Favorites = () => <h2>Favorites</h2>;
 
   return (
