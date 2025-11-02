@@ -12,6 +12,7 @@ export const HeaderContainer = styled.header`
     left: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    border-bottom: 2px solid #fff;
 `
 
 export const LogoImage = styled.img`
@@ -24,4 +25,5 @@ export const LogoText = styled.h1`
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
+    
 `

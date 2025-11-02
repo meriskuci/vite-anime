@@ -79,7 +79,7 @@ export const HorizontalScroll = styled.div`
     height: 8px;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: #888;
+    background-color: #252424ff;
     border-radius: 4px;
   }
   &::-webkit-scrollbar-track {

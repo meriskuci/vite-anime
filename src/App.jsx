@@ -3,6 +3,8 @@ import './App.css'
 import { Header } from './components/Header/Header'
 import { Sidebar } from './components/Sidebar/Sidebar';
 import { Home } from "./pages/Home";
+import AboutUs from "./pages/AboutUs";
+
 
 function App() {
 
@@ -21,7 +23,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path='/anime' element={<Anime />} />
         <Route path='/manga' element={<Manga />} />
-        <Route path='/about' element={<About />} />
+        <Route path='/about' element={<AboutUs />} />
         <Route path='/favorites' element={<Favorites />} />
 
       </Routes>

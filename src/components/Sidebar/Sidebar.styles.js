@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+
+
 export const SidebarContainer = styled.nav`
     width: 200px;
     height: 100vh;
@@ -10,6 +12,7 @@ export const SidebarContainer = styled.nav`
     display: flex;
     flex-direction: column;
     padding-top: 20px;
+    border-right: 2px solid #fff; 
 `
 
 export const NavList = styled.ul`
