@@ -42,6 +42,16 @@ export const getAnimeByCategory = async (category) => {
     }
 };
 
+export const getAnimeById = async (id) => {
+    try{
+        const res = await axios.get(`${API_URL}/anime/${id}`);
+        return res.data.data;
+    }catch(error){
+        console.log("Error fetching anime details", error);
+        return null;
+    }
+}
+
 export const getTrendingManga = async () => {
     try {
         const res = await axios.get(`${API_URL}/trending/manga`);
