@@ -5,12 +5,13 @@ import { Sidebar } from './components/Sidebar/Sidebar';
 import { Home } from './pages/Home/Home'
 import AboutUs from './pages/AboutUs/AboutUs'
 import { Anime } from "./pages/Anime/Anime";
+import { Manga } from "./pages/Manga/Manga";
 
 
 function App() {
 
 
-  const Manga = () => <h2>Manga Page</h2>;
+
   const Favorites = () => <h2>Favorites</h2>;
 
   return (
