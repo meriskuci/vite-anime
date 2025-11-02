@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import { getAnimeByCategory, getMangaByCategory, getTrendingAnime } from "../services/animeService";
+import { getAnimeByCategory, getMangaByCategory, getTrendingAnime } from "../../services/animeService";
 import { HomeContainer, Section, HeroCarousel, CarouselItem, HorizontalScroll, SectionTitle, CarouselNavButton, HeroImage } from "./Home.styles";
 import { useState, useEffect } from "react";
 

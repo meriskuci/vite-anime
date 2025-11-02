@@ -51,7 +51,7 @@ export const MemberImage = styled.img`
     left: 50%;
     transform: translate(-50%, -30%);
   }
-  }
+  
 `;
 
 export const MemberInfo = styled.div`

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import Name1 from "../assets/images/111769177.jpg";
-import Name2 from "../assets/images/kuci.jpg";
-import Name3 from "../assets/images/erna.jpg";
+import Name1 from "../../assets/images/111769177.jpg";
+import Name2 from "../../assets/images/kuci.jpg";
+import Name3 from "../../assets/images/erna.jpg";
 import {
   AboutContainer,
   Title,
@@ -42,10 +42,10 @@ const AboutUs = () => {
   const [team, setTeam] = useState([]);
 
   useEffect(() => {
-    // simuliramo asinhrono učitavanje tima (npr. sa API-ja)
+   
     const timer = setTimeout(() => {
       setTeam(teamData);
-    }, 500); // delay 0.5s
+    }, 500); 
 
     return () => clearTimeout(timer);
   }, []);
