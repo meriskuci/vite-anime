@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { AnimeContainer, AnimeList, AnimeCard } from "../Anime/Anime.styles
-"
+import { AnimeContainer, AnimeList, AnimeCard } from "../Anime/Anime.styles"
 import { Header, RemoveButton } from "./Favorites.styles";
 
 
