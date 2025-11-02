@@ -7,6 +7,7 @@ import AboutUs from './pages/AboutUs/AboutUs'
 import { Anime } from "./pages/Anime/Anime";
 import { Manga } from "./pages/Manga/Manga";
 import { AnimeDetails } from "./components/AnimeDetails/AnimeDetails";
+import { MangaDetails } from "./components/MangaDetails/MangaDetails";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path='/about' element={<AboutUs />} />
         <Route path='/favorites' element={<Favorites />} />
         <Route path="/anime/:id" element={<AnimeDetails />} />
+        <Route path="/manga/:id" element={<MangaDetails />} />
 
       </Routes>
 
