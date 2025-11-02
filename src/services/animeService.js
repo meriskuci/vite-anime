@@ -12,6 +12,21 @@ export const getTrendingAnime = async () => {
     }
 };
 
+export const getAnimeByName = async (name) => {
+    try{
+        const res = await axios.get(`${API_URL}/anime`, {
+            params: {
+                "filter[text]": name,
+                "page[limit]": 20,
+            },
+        });
+        return res.data.data;
+    }catch(error){
+        console.log("Error searching by name", error);
+        return [];
+    }
+}
+
 export const getAnimeByCategory = async (category) => {
     try {
         const res = await axios.get(`${API_URL}/anime`, {
