@@ -9,6 +9,7 @@ import { Manga } from "./pages/Manga/Manga";
 import { AnimeDetails } from "./components/AnimeDetails/AnimeDetails";
 import { MangaDetails } from "./components/MangaDetails/MangaDetails";
 import { Favorites } from "./pages/Favorites/Favorites";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -26,13 +27,14 @@ function App() {
         <Route path='/favorites' element={<Favorites/>} />
         <Route path="/anime/:id" element={<AnimeDetails />} />
         <Route path="/manga/:id" element={<MangaDetails />} />
-
       </Routes>
-
+      <Footer />
+      
+  
     </Router>
 
 
   )
 }
 
-export default App
+export default App;

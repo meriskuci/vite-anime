@@ -23,13 +23,10 @@ export const CategoryWrapper = styled.div`
     display: flex;
     flex-direction: column;
     min-width: 180px;
+    
 `;
 
-export const CategoryLabel = styled.label`
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #fff;
-`;
+
 
 export const CategorySelect = styled.select`
     padding: 10px 14px;
@@ -39,11 +36,13 @@ export const CategorySelect = styled.select`
     color: #fff;
     cursor: pointer;
     font-size: 14px;
-    width: 100%;
+    width: 600px;
+    height: 45px;
+    
 
     &:focus {
         outline: none;
-        box-shadow: 0 0 0 2px #ff6f61;
+       
     }
 
     option {
@@ -57,11 +56,15 @@ export const SearchBar = styled.input`
     border-radius: 8px;
     border: none;
     font-size: 14px;
-    width: 200px;
-
+    font-color: white;
+    width: 170px;
+    height: 30px;
+   
+  
+    background-color: #5a5957;
     &:focus {
         outline: none;
-        box-shadow: 0 0 0 2px #ff6f61;
+        
     }
 `;
 
@@ -72,29 +75,47 @@ export const AnimeList = styled.div`
 `;
 
 export const AnimeCard = styled.div`
-    flex: 0 0 22%;
-    cursor: pointer;
+  position: relative;
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Overlay efekat */
+  .overlay {
+    position: absolute;
+    inset: 0; /* isto kao top: 0; left: 0; right: 0; bottom: 0 */
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 10px;
+  }
+
+  &:hover .overlay {
+    opacity: 1;
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px;
     text-align: center;
-    background-color: #4a4846;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-    &:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-    }
-
-    img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-    }
-
-    p {
-        margin: 10px 0;
-        font-size: 16px;
-        font-weight: bold;
-        color: white;
-    }
+  }
 `;

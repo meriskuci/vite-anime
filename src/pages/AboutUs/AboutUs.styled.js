@@ -4,7 +4,7 @@ export const AboutContainer = styled.div`
   padding: 150px;
   background-color: #3d3c3a;
   text-align: center;
-   min-height: 100vh; 
+   min-height: 50vh; 
 `;
 
 export const Title = styled.h2`

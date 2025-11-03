@@ -4,17 +4,28 @@ export const Header = styled.h1`
   margin-bottom: 20px;
   font-size: 28px;
   color: white;
+  
+`;
+
+export const EmptyMessage = styled.h1`
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 `;
 
 export const RemoveButton = styled.button`
-  margin-top: 10px;
-  padding: 5px 10px;
-  border-radius: 8px;
-  border: 1px solid white;
-  cursor: pointer;
-  background-color: #3d3c3a;
-  color: white;
-  font-weight: bold;
-  transition: background 0.2s;
+  background: none;      
+  border: none;        
+  color: white;         
+  padding: 0;       
+  font: inherit;        
+  cursor: pointer;       
+  text-decoration: none; 
 
+  &:hover {
+    color: #ffffffff;      
+  }
 `;

@@ -1,8 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getMangaByCategory, getMangaByName } from "../../services/animeService";
-import { AnimeContainer, SearchContainer, CategoryWrapper, CategoryLabel, CategorySelect, SearchBar, AnimeCard, AnimeList } from "../Anime/Anime.styles";
-
+import { 
+  AnimeContainer, 
+  SearchContainer, 
+  CategoryWrapper, 
+  CategorySelect, 
+  AnimeList, 
+  AnimeCard,
+  SearchBar
+} from "../Anime/Anime.styles";
+import { ScrollToTopButton } from "../../components/ScrollToTopButton/ScrollToTopButton";
 
 export const Manga = () => {
     const [mangaList, setMangaList] = useState([]);
@@ -42,12 +50,10 @@ export const Manga = () => {
         }
     };
 
-
     useEffect(() => {
         setPage(1);
         fetchManga(1, category, search);
     }, [category, search]);
-
 
     useEffect(() => {
         if (!hasMore) return;
@@ -70,7 +76,6 @@ export const Manga = () => {
         <AnimeContainer>
             <SearchContainer>
                 <CategoryWrapper>
-                    <CategoryLabel>Choose Category</CategoryLabel>
                     <CategorySelect value={category} onChange={handleCategoryChange}>
                         <option value="">All</option>
                         <option value="Adventure">Adventure</option>
@@ -85,12 +90,14 @@ export const Manga = () => {
                     </CategorySelect>
                 </CategoryWrapper>
 
-                <SearchBar
-                    type="text"
-                    placeholder="Search manga..."
-                    value={search}
-                    onChange={handleSearch}
-                />
+             
+                    <SearchBar
+                        type="text"
+                        placeholder="Search manga..."
+                        value={search}
+                        onChange={handleSearch}
+                    />
+                
             </SearchContainer>
 
             <AnimeList>
@@ -101,11 +108,16 @@ export const Manga = () => {
                     >
                         <img src={manga.attributes.posterImage.small} alt={manga.attributes.canonicalTitle} />
                         <p>{manga.attributes.canonicalTitle}</p>
+                        <div className="overlay">
+        <div className="title">{manga.attributes.canonicalTitle}</div>
+        <div className="click-more">Click to see more</div>
+      </div>    
                     </AnimeCard>
                 ))}
             </AnimeList>
 
             <div ref={loader} />
+            <ScrollToTopButton/>
         </AnimeContainer>
     );
 };

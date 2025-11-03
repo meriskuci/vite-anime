@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getAnimeByCategory, getAnimeByName } from "../../services/animeService";
-import { AnimeContainer, SearchContainer, SearchBar, CategorySelect, AnimeList, AnimeCard, CategoryWrapper, CategoryLabel} from "./Anime.styles";
+import { AnimeContainer, SearchContainer, SearchBar, CategorySelect, AnimeList, AnimeCard, CategoryWrapper, } from "./Anime.styles";
+import { ScrollToTopButton } from "../../components/ScrollToTopButton/ScrollToTopButton";
 
 export const Anime = () => {
     const [animeList, setAnimeList] = useState([]);
@@ -71,7 +72,7 @@ export const Anime = () => {
         <AnimeContainer>
             <SearchContainer>
                 <CategoryWrapper>
-                    <CategoryLabel>Choose Category</CategoryLabel>
+                    
                     <CategorySelect value={category} onChange={handleCategoryChange}>
                         <option value="">All</option>
                         <option value="Adventure">Adventure</option>
@@ -101,12 +102,16 @@ export const Anime = () => {
                         onClick={() => navigate(`/anime/${anime.id}`)}
                     >
                         <img src={anime.attributes.posterImage.small} alt={anime.attributes.canonicalTitle} />
+                       <div className="overlay">
                         <p>{anime.attributes.canonicalTitle}</p>
+                        <div className="click-more">Click to see more</div>
+                        </div>
                     </AnimeCard>
                 ))}
             </AnimeList>
 
             <div ref={loader} />
+            <ScrollToTopButton/>
         </AnimeContainer>
     );
 };
